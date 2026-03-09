@@ -1,0 +1,44 @@
+############################################################
+# Core project dependencies
+#
+# Note: Install PyTorch separately per your platform (CPU/CUDA).
+# We intentionally omit torch/torchvision here to avoid install
+# failures on Windows. See README for platform-specific commands.
+############################################################
+
+Django>=5.1
+python-dotenv>=1.0
+
+# ML and model tooling
+diffusers>=0.24
+transformers>=4.36
+huggingface-hub>=0.20
+accelerate>=0.25
+safetensors>=0.4
+tqdm>=4.66
+
+# Image processing
+numpy>=1.23
+pillow>=10.0
+opencv-python>=4.8
+
+# HTTP utilities
+requests>=2.31
+
+# Optional: If you need tokenizers explicitly
+# (usually pulled in by transformers)
+tokenizers>=0.13
+
+############################################################
+# PyTorch (install separately)
+#
+# CPU-only (Windows/Linux/macOS):
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+#
+# CUDA (Windows/Linux): choose the right CUDA version at
+#   https://pytorch.org/get-started/locally/
+# Example for CUDA 12.x:
+#   pip install --index-url https://download.pytorch.org/whl/cu121 torch torchvision
+#
+# xFormers is optional and not required for CPU-only; skip on Windows.
+############################################################
